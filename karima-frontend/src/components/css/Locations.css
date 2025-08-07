@@ -1,0 +1,459 @@
+.locations {
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: calc(100vh - 70px);
+}
+
+.locations-header {
+  margin-bottom: 2rem;
+}
+
+.locations-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.locations-header p {
+  margin: 0;
+  color: #666;
+  font-size: 1rem;
+}
+
+.apartments-navbar {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.navbar-container {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.5rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.nav-item:hover {
+  border-color: #667eea;
+  background: #f8f9fa;
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.apartment-icon {
+  font-size: 1rem;
+}
+
+.apartment-number {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.month-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.month-card:hover {
+  transform: translateY(-2px);
+}
+
+.month-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.month-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.calendar-content {
+  min-height: 300px;
+}
+
+.calendar-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: #666;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-empty p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.rental-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tenant-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tenant-icon {
+  font-size: 1rem;
+}
+
+.tenant-name {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.rent-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rent-amount {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.2rem;
+}
+
+.rent-status {
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.payment-info {
+  display: flex;
+  align-items: center;
+}
+
+.payment-date {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.calendar-container {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.day-header {
+  background: white;
+  border-radius: 6px;
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 60px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.calendar-day.empty {
+  background: transparent;
+  cursor: default;
+}
+
+.calendar-day.empty:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.calendar-day:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.calendar-day.occupied {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.day-number {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.day-tenant-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.day-tenant-name {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.day-rent-amount {
+  font-size: 0.6rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.rentals-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.rental-summary-item {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rental-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.rental-tenant {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.rental-amount {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.rental-summary-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rental-status {
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.rental-period {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.locations-content {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.month-index {
+  width: 250px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+}
+
+.month-index h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.month-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.month-item {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.month-item:hover {
+  border-color: #667eea;
+  background: #f8f9fa;
+}
+
+.month-item.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: #667eea;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.calendar-section {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .locations {
+    padding: 1rem;
+  }
+
+  .navbar-container {
+    gap: 0.25rem;
+  }
+
+  .nav-item {
+    padding: 0.5rem 0.75rem;
+    min-width: 100px;
+  }
+
+  .locations-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .month-index {
+    width: 100%;
+    position: static;
+  }
+
+  .month-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .month-item {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+  }
+
+  .month-card {
+    padding: 1rem;
+  }
+
+  .rental-summary-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  .calendar-grid {
+    gap: 2px;
+    padding: 0.5rem;
+  }
+
+  .calendar-day {
+    min-height: 50px;
+  }
+
+  .day-number {
+    font-size: 0.9rem;
+  }
+
+  .day-tenant-name {
+    font-size: 0.6rem;
+  }
+
+  .day-rent-amount {
+    font-size: 0.5rem;
+  }
+}
