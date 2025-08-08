@@ -16,6 +16,49 @@ const Apartments = () => {
       });
   }, []);
 
+  const getCurrentLocation = (apartement) => {
+    return apartement.locations.find((location) => {
+      const today = new Date();
+      // console.log(location);
+      const dateEntree = new Date(location.dateEntree);
+      const dateSortie = new Date(location.dateSortie);
+      if (today >= dateEntree && today <= dateSortie) {
+        return location;
+      }
+    });
+  };
+
+  const getExitDay = (apartment) => {
+    const currentLocation = getCurrentLocation(apartment);
+    return new Date(currentLocation.dateSortie).toLocaleDateString("fr-FR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  };
+
+  const getLocataire = (apartement) => {
+    const currentLocation = getCurrentLocation(apartement);
+    console.log(currentLocation);
+    return currentLocation.locataire;
+  };
+
+  //   const currentLocation = apartment.locations.find((location) => {
+  //     const today = new Date();
+  //     console.log(location);
+  //     const dateEntree = new Date(location.dateEntree);
+  //     const dateSortie = new Date(location.dateSortie);
+  //     return today >= dateEntree && today <= dateSortie;
+  //   });
+  //   return currentLocation
+  //     ? new Date(currentLocation.dateSortie).toLocaleDateString("fr-FR", {
+  //         day: "2-digit",
+  //         month: "2-digit",
+  //         year: "numeric",
+  //       })
+  //     : null;
+  // };
+
   const getStatusColor = (status) => {
     return status === true ? "#ff4757" : "#2ed573";
   };
@@ -70,17 +113,24 @@ const Apartments = () => {
               </h3>
             </div>
 
-            {apartment.status === "occupied" && (
+            {apartment.occupe === true && (
               <div className="tenant-info">
-                <div className="tenant-header">
+                {/* <div className="tenant-header">
                   <span className="tenant-icon">👤</span>
                   <span className="tenant-label">Locataire actuel</span>
-                </div>
-                <p className="tenant-name">{apartment.tenant}</p>
-                <p className="move-in-date">
-                  Depuis le{" "}
-                  {new Date(apartment.moveInDate).toLocaleDateString("fr-FR")}
+                </div> */}
+                <p className="tenant-name">
+                  Locataire actuel: {getLocataire(apartment).nom}
                 </p>
+                <p className="move-in-date">
+                  Sortira le{" "}
+                  {new Date(getExitDay(apartment)).toLocaleDateString("fr-FR")}
+                </p>
+              </div>
+            )}
+            {apartment.occupe === false && (
+              <div className="tenant-info">
+                <p className="move-in-date">Aucune Location actuelle</p>
               </div>
             )}
 

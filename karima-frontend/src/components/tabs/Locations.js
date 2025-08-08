@@ -409,7 +409,11 @@ const Locations = () => {
         const exitDate = new Date(location.dateSortie);
         const checkDate = new Date(currentYear, currentMonth - 1, day);
 
-        return checkDate > entryDate && checkDate <= exitDate;
+        entryDate.setHours(0, 0, 0, 0);
+        exitDate.setHours(0, 0, 0, 0);
+        checkDate.setHours(0, 0, 0, 0);
+
+        return checkDate >= entryDate && checkDate <= exitDate;
       });
     };
 
@@ -459,8 +463,17 @@ const Locations = () => {
                     {getStatusText(location.status)}
                   </span>
                   <span className="rental-period">
-                    {new Date(location.dateEntree).toLocaleDateString()} -{" "}
-                    {new Date(location.dateSortie).toLocaleDateString()}
+                    {new Date(location.dateEntree).toLocaleDateString("fr-FR", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })}{" "}
+                    -{" "}
+                    {new Date(location.dateSortie).toLocaleDateString("fr-FR", {
+                      day: "2-digit",
+                      month: "2-digit",
+                      year: "numeric",
+                    })}
                   </span>
                 </div>
               </div>
@@ -576,7 +589,7 @@ const Locations = () => {
                   className="add-tenant-btn"
                   onClick={() => navigate("/add-location")}
                 >
-                  + Ajouter un courtier
+                  + Ajouter une location
                 </button>
               </div>
 

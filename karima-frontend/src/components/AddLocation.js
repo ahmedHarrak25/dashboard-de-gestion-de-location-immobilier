@@ -200,13 +200,12 @@ const AddLocation = () => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="courtier">Courtier *</label>
+              <label htmlFor="courtier">Courtier</label>
               <select
                 id="courtier"
                 name="courtier"
                 value={formData.courtier}
                 onChange={handleInputChange}
-                required
                 className="form-input"
               >
                 <option value="">Sélectionner un courtier</option>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="165c871e-7f54-4998-843a-41805d87f3e5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/karima-app/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/KarimaAppApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/controller/AppartementController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/controller/CourtierController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/controller/LocataireController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/controller/LocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/model/Appartement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/model/Courtier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/model/Locataire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/model/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/model/LocationDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/repository/AppartementRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/repository/CourtierRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/repository/LocataireRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/java/com/karima/karima/app/repository/LocationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karima-app/src/test/java/com/karima/karima/app/KarimaAppApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="30xbH5gGHVAHQeaes0RltECzEUB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/ahmed/OneDrive - Ecole Marocaine des Sciences de l'Ingénieur/Documents/Karima"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="165c871e-7f54-4998-843a-41805d87f3e5" name="Changes" comment="" />
+      <created>1754572079786</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1754572079786</updated>
+    </task>
+    <servers />
+  </component>
+</project>
