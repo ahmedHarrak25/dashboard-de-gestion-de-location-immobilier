@@ -13,6 +13,9 @@ import Courtiers from "./components/tabs/Courtiers";
 import AddCourtier from "./components/AddCourtier";
 import ModifyCourtier from "./components/ModifyCourtier";
 import AddLocation from "./components/AddLocation";
+import ViewApartments from "./components/ViewApartment";
+import ViewLocataire from "./components/ViewLocataire";
+import ViewCourtier from "./components/ViewCourtier";
 
 function AppContent() {
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -39,8 +42,11 @@ function AppContent() {
           <Route path="/add-tenant" element={<AddTenant />} />
           <Route path="/add-courtier" element={<AddCourtier />} />
           <Route path="/modify-tenant/:id" element={<ModifyTenant />} />
+          <Route path="/view-locataire/:id" element={<ViewLocataire />} />
+          <Route path="/view-courtier/:id" element={<ViewCourtier />} />
           <Route path="/modify-courtier/:id" element={<ModifyCourtier />} />
           <Route path="/add-location/" element={<AddLocation />} />
+          <Route path="/view-apartment/:id" element={<ViewApartments />} />
         </Routes>
       </div>
     </div>

@@ -40,9 +40,15 @@ public class LocationController {
 
     }
 
+    @GetMapping("/locataire/{id}")
+    public List<Location> getByLocataire(@PathVariable Long id){
+        return locationRepo.findByLocataireId(id);
+    }
 
-
-
+    @GetMapping("/courtier/{id}")
+    public List<Location> getByCourtier(@PathVariable Long id){
+        return locationRepo.findByCourtierId(id);
+    }
 
     @PostMapping
     public ResponseEntity<?> create(@RequestBody LocationDTO dto){

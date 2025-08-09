@@ -159,7 +159,18 @@ const Tenants = () => {
                   >
                     Modifier
                   </button>
-                  <button className="table-action-btn view-btn">Voir</button>
+                  <button
+                    className="table-action-btn view-btn"
+                    onClick={() => {
+                      console.log("Tenant object:", tenant);
+                      navigate(
+                        "/view-locataire/" +
+                          (tenant.id || tenant._id || tenant.locataireId)
+                      );
+                    }}
+                  >
+                    Voir
+                  </button>
                 </td>
               </tr>
             ))}

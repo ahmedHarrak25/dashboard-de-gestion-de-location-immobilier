@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface LocationRepository extends JpaRepository<Location, Long> {
     List<Location> findByAppartementId(Long appartementId);
+    List<Location> findByLocataireId(Long locataireId);
+    List<Location> findByCourtierId(Long courtierId);
 }

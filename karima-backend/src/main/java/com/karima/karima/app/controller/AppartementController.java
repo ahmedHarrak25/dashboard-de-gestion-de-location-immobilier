@@ -30,8 +30,8 @@ public class AppartementController {
         for(Appartement appart : appartements) {
             List<Location> locations = locationRepo.findByAppartementId(appart.getId());
             boolean isOccupied = locations.stream().anyMatch(location ->
-                    !today.isBefore(location.getDateEntree())&& !today.isAfter(location.getDateSortie())
-                    );
+                    !today.isBefore(location.getDateEntree()) && today.isBefore(location.getDateSortie())
+            );
             appart.setOccupe(isOccupied);
             appartementRepo.save(appart);
         }
